@@ -18,3 +18,21 @@ export const sliderItems = [
     desc:"Get 30% to all our products"
   },
 ]
+
+export const categories = [
+  {
+    id:1,
+    img:"https://images.pexels.com/photos/7496138/pexels-photo-7496138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Jackets!"
+  },
+  {
+    id:2,
+    img:"https://images.pexels.com/photos/4210866/pexels-photo-4210866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Jeans!"
+  },
+  {
+    id:3,
+    img:"https://images.pexels.com/photos/6311251/pexels-photo-6311251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title:"T-Shirs!"
+  }
+]
