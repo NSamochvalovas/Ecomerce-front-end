@@ -21,7 +21,7 @@ function Slider() {
       </S.Arrow>
       <S.Wrapper slideIndex = {slideIndex}>
         {sliderItems.map((item)=>(
-          <S.Slide>
+          <S.Slide key={item.id}>
             <S.Slider1 style={{backgroundImage:`url(${item.img})`}}>
               <S.InfoContainer>
                 <S.H1>{item.title}</S.H1>

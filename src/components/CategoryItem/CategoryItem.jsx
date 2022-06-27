@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './CategoryItems.styles';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const CategoryItem = ( {item} ) => {
   return (
