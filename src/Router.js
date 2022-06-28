@@ -12,7 +12,7 @@ const Router = () => {
     <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/Products" element={<ProductsList />} />
+        <Route exact path="/products" element={<ProductsList />} />
       </Routes>
     <Footer />
     </BrowserRouter>

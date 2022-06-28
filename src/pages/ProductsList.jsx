@@ -1,9 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import Filter from '../components/Filter/Filter';
+import Products from '../components/Products/Products';
 
 const ProductsList = () => {
   return (
-    <div>ProductsList</div>
+    <>
+      <Filter title="Clothes" />
+      <Products />
+    </>
   )
 }
 
