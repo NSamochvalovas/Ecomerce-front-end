@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {mobile, tablet} from '../../responsive';
 
 export const Container = styled.div`
 
@@ -6,6 +7,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   padding:20px;
+  ${mobile({padding:"10px"})}
 `;
 
 export const Title = styled.h3`
@@ -18,14 +20,17 @@ export const Top = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-bottom: 40px;
+  ${mobile({flexDirection:"column", marginBottom:"20px"})}
 `;
 
 export const TopText = styled.div`
   text-decoration: underline;
+  ${mobile({padding:"10px 0px"})}
 `;
 export const Bottom = styled.div`
   display:flex;
   justify-content: space-between;
+  ${tablet({flexDirection:"column"})}
 `;
 
 export const Info = styled.div`
@@ -43,7 +48,7 @@ export const ProductDetails = styled.div`
 `;
 
 export const Image = styled.img`
-  width:200px;
+  width:50%;
 `;
 
 export const Details = styled.div`
@@ -91,6 +96,7 @@ export const Summary = styled.div`
   border-radius:5px;
   padding:10px;
   max-height:200px;
+  ${tablet({marginTop:"10px"})}
 `;
 
 export const SummaryTitle = styled.h4`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import {mobile, tablet} from '../../responsive';
 
 export const SingleProduct = styled.div`
   display:flex;
@@ -8,6 +8,8 @@ export const SingleProduct = styled.div`
   margin:5px;
   width: calc(25% - 10px);
   position:relative;
+  ${tablet({width:"calc(33% - 10px)"})}
+  ${mobile({width:"calc(50% - 10px)"})}
 `;
 
 export const InfoBLock = styled.div`

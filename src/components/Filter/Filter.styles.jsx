@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {tablet} from '../../responsive';
 
 export const Container = styled.div`
 
@@ -13,6 +14,7 @@ export const Title = styled.h2`
 export const FilterContainer = styled.div`
   display:flex;
   justify-content: space-between;
+  ${tablet({flexDirection:"column"})}
 `;
 
 export const Filter = styled.div`

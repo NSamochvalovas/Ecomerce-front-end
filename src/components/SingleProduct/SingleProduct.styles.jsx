@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import { tablet } from '../../responsive';
 
 export const Container = styled.div`
-  
 `;
 
 export const Wrapper = styled.div`
   padding:50px;
   displaY:flex;
+  ${tablet({padding:"10px", flexDirection:"column"})}
 `;
 
 export const ImgContainer = styled.div`
