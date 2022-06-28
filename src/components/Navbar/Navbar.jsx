@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as S from './Navbar.styles';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
-
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
   return (
@@ -20,8 +20,10 @@ function Navbar(props) {
           <S.Logo>Logo.</S.Logo>
         </S.Center>
         <S.Right>
-          <S.MenuItem>Register</S.MenuItem>
-          <S.MenuItem>Sig In</S.MenuItem>
+          <S.MenuItem><Link to="/">Home</Link></S.MenuItem>
+          <S.MenuItem><Link to="/products">Products</Link></S.MenuItem>
+          <S.MenuItem><Link to="/register">Register</Link></S.MenuItem>
+          <S.MenuItem><Link to="/login">Log in</Link></S.MenuItem>
           <S.MenuItem>
           <Badge badgeContent={4} color="primary">
             <ShoppingCartOutlined />
