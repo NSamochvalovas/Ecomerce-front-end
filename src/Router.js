@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import CartPage from "./pages/CartPage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import RegisterPage from "./pages/RegisterPage";
 import Product from "./pages/Product";
@@ -19,6 +20,7 @@ const Router = () => {
         <Route exact path="/product" element={<Product />} />
         <Route exact path="/register" element={<RegisterPage />} />
         <Route exact path="/login" element={<LoginForm />} />
+        <Route exact path="/cart" element={<CartPage />} />
       </Routes>
     <Footer />
     </BrowserRouter>
