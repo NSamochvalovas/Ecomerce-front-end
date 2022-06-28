@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import * as S from './Slider.styles';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
 import {sliderItems} from '../../data';
+import Button from '../Button/Button';
 
 function Slider() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -26,7 +27,7 @@ function Slider() {
               <S.InfoContainer>
                 <S.H1>{item.title}</S.H1>
                 <S.P>{item.desc}</S.P>
-                <S.Button>SHOP NOW</S.Button>
+                <Button text="Shop Now" />
               </S.InfoContainer> 
             </S.Slider1>      
           </S.Slide>
