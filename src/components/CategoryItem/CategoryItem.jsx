@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from './CategoryItems.styles';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const CategoryItem = ( {item} ) => {
   return (
@@ -9,7 +10,9 @@ const CategoryItem = ( {item} ) => {
         <S.Image src={item.img}/>
         <S.Info>
           <h2>{item.title}</h2>
-          <Button text="Wiew Category" />
+          <Link to={`/products/${item.category}`}>
+            <Button text="Wiew Category" />
+          </Link>
         </S.Info>
       </S.Container>
   )
