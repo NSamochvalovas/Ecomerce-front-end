@@ -36,7 +36,7 @@ export const categories = [
     id:3,
     img:"https://images.pexels.com/photos/6311251/pexels-photo-6311251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title:"T-Shirs!",
-    category:"T-Shirts"
+    category:"Shirts"
   }
 ]
 

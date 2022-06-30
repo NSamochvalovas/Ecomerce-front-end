@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function Product( {item} ) {
   return (
     <S.SingleProduct>
-      <S.Image src={item.img} />
+      <S.Image src={item.image} />
       <S.InfoBLock>
         <S.Info>
             <S.Icon>
@@ -29,6 +29,6 @@ function Product( {item} ) {
 }
 
 Product.propTypes = {
-  item: PropTypes.node,
+  item: PropTypes.object,
 }
 export default Product

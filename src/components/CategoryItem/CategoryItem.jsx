@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './CategoryItems.styles';
-import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -18,8 +17,5 @@ const CategoryItem = ( {item} ) => {
   )
 }
 
-CategoryItem.propTypes = {
-  item: PropTypes.node,
-}
 
 export default CategoryItem

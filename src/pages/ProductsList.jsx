@@ -7,7 +7,6 @@ const ProductsList = () => {
   return (
     <>
       <Filter title="Clothes" />
-      <Products />
       <NewsLetter />
     </>
   )
