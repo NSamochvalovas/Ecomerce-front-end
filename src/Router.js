@@ -12,9 +12,7 @@ import Footer from "./components/Footer/Footer";
 
 const Router = () => {
   const user = true;
-  const Child = () => {
-    const { category } = useParams();
-  }
+
   return (
     <BrowserRouter>
     <Navbar />

@@ -9,6 +9,7 @@ const SingleProduct = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -19,6 +20,14 @@ const SingleProduct = () => {
     };
     getProduct();
   }, [id]);
+
+  const handelQuantity = (type) =>{
+    if(type === "decrease") {
+      quantity > 1 && setQuantity(quantity-1)
+    } else if (type === "increase") {
+      setQuantity(quantity+1)
+    }
+  }
 
   return (
     <S.Container>
@@ -32,9 +41,9 @@ const SingleProduct = () => {
           <S.Price>$ {product.price}</S.Price>
           <S.AddContainer>
             <S.AmounContainer>
-              <Remove />
-              <S.Amount>1</S.Amount>
-              <Add />
+              <Remove onClick={() => handelQuantity("decrease")} />
+              <S.Amount>{quantity}</S.Amount>
+              <Add onClick={() => handelQuantity("increase")} />
             </S.AmounContainer>
             <Button text="Add" />
           </S.AddContainer>
