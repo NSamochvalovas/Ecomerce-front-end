@@ -21,7 +21,6 @@ function Navbar(props) {
         </S.Center>
         <S.Right>
           <S.MenuItem><Link to="/">Home</Link></S.MenuItem>
-          <S.MenuItem><Link to="/products">Products</Link></S.MenuItem>
           <S.MenuItem><Link to="/register">Register</Link></S.MenuItem>
           <S.MenuItem><Link to="/login">Log in</Link></S.MenuItem>
           <S.MenuItem>

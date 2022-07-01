@@ -2,6 +2,7 @@ import { FavoriteBorderOutlined, SearchOffOutlined, ShoppingCartCheckoutOutlined
 import React from 'react';
 import * as S from './Product.styles';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Product( {item} ) {
   return (
@@ -15,7 +16,9 @@ function Product( {item} ) {
           </S.Info>
           <S.Info>
           <S.Icon>
-            <SearchOffOutlined />
+            <Link to={`/product/${item._id}`}>
+              <SearchOffOutlined />
+            </Link>
           </S.Icon>
           </S.Info>
           <S.Info>
