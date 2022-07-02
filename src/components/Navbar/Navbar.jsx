@@ -1,11 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as S from './Navbar.styles';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
-function Navbar(props) {
+const Navbar = () => {
+
+  const quantity = useSelector(state=> state.cart.quantity);
+
   return (
     <S.Container>
       <S.Wrapper>
@@ -24,9 +27,11 @@ function Navbar(props) {
           <S.MenuItem><Link to="/register">Register</Link></S.MenuItem>
           <S.MenuItem><Link to="/login">Log in</Link></S.MenuItem>
           <S.MenuItem>
-          <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined />
+            <Link to="/cart">
+              <Badge badgeContent={quantity} color="primary">
+              <ShoppingCartOutlined />
           </Badge>
+            </Link>
           </S.MenuItem>
         </S.Right>
       </S.Wrapper>

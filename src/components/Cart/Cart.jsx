@@ -1,9 +1,10 @@
 import React from 'react';
 import * as S from './Cart.styles';
 import Button from '../Button/Button';
-import { Add, Remove } from '@mui/icons-material';
+import { useSelector } from 'react-redux';
 
 const  Cart = () => {
+  const cart = useSelector(state=>state.cart)
   return (
     <S.Container>
       <S.Wrapper>
@@ -15,30 +16,26 @@ const  Cart = () => {
         </S.Top>
         <S.Bottom>
           <S.Info>
-            <S.Product>
-              <S.ProductDetails>
-                <S.Image src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                <S.Details>
-                  <S.ProductName><b>Product: </b>Product name</S.ProductName>
-                  <S.ProductId><b>Id: </b>123456</S.ProductId>
-                  <S.ProductSize><b>Size: </b>XL</S.ProductSize>
-                </S.Details>
-              </S.ProductDetails>
-              <S.PriceDetails>
-                <S.ProductAmountDetails>
-                  <Add />
-                  <S.ProductAmount>1</S.ProductAmount>
-                  <Remove />
-                </S.ProductAmountDetails>
-                <S.ProductPrice>$20</S.ProductPrice>
-              </S.PriceDetails>
-            </S.Product>
+          {cart.products.map((product) => (
+               <S.Product>
+               <S.ProductDetails>
+                 <S.Image src={product.image} />
+                 <S.Details>
+                   <S.ProductName><b>Product: </b>{product.title}</S.ProductName>
+                   <S.ProductId><b>Id: </b>{product._id}</S.ProductId>
+                   <S.ProductAmount><b>Quantity: </b>{product.quantity}</S.ProductAmount>
+                   <S.ProductPrice><b>Price: </b>$ {product.price * product.quantity}</S.ProductPrice>
+                 </S.Details>
+               </S.ProductDetails>
+             </S.Product>
+            ))}
+           
           </S.Info>
           <S.Summary>
             <S.SummaryTitle>Order Summary</S.SummaryTitle>
             <S.SummaryItem>
               <S.SummaryItemText>Subtotal</S.SummaryItemText>
-              <S.SummaryItemPrice>$20</S.SummaryItemPrice>
+              <S.SummaryItemPrice>$ {cart.total}</S.SummaryItemPrice>
             </S.SummaryItem>
             <S.SummaryItem>
               <S.SummaryItemText>Shipping Price</S.SummaryItemText>
@@ -46,7 +43,7 @@ const  Cart = () => {
             </S.SummaryItem>
             <S.SummaryItem>
               <S.SummaryItemText><b>Total</b></S.SummaryItemText>
-              <S.SummaryItemPrice><b>$25</b></S.SummaryItemPrice>
+              <S.SummaryItemPrice><b>$ {cart.total + 5}</b></S.SummaryItemPrice>
             </S.SummaryItem>
             <Button text="Confirm" />
           </S.Summary>

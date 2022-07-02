@@ -48,23 +48,30 @@ export const ProductDetails = styled.div`
 `;
 
 export const Image = styled.img`
-  width:50%;
+  width:30%;
+  ${tablet({width:"50%"})}
 `;
 
 export const Details = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding:20px;
 `;
 
 export const ProductName = styled.span`
+  padding:10px;
 `;
 
 export const ProductId = styled.span`
+  padding:10px;
 `;
 
-export const ProductSize = styled.span`
+export const ProductAmount = styled.span`
+  padding:10px;
+`;
+
+export const ProductPrice = styled.span`
+  padding:10px;
 `;
 
 export const PriceDetails = styled.div`
@@ -80,15 +87,7 @@ export const ProductAmountDetails = styled.div`
   align-items: center;
 `;
 
-export const ProductAmount = styled.div`
-  margin:5px;
-`;
 
-export const ProductPrice = styled.div`
-  padding-top:10px;
-  font-size:22px;
-  font-weight:600;
-`;
 
 export const Summary = styled.div`
   flex:1;

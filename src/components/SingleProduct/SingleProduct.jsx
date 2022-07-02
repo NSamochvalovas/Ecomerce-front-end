@@ -1,22 +1,27 @@
 import { Add, Remove } from '@mui/icons-material';
 import React, {useState, useEffect } from 'react';
 import * as S from './SingleProduct.styles';
-import Button from '../Button/Button';
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../../requoseMethods';
+import { addProduct } from '../../redux/cartRedux';
+import { useDispatch } from 'react-redux/es/exports'; 
 
 const SingleProduct = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get("/products/find/" + id);
         setProduct(res.data);
-      } catch {}
+      } catch (err){
+        console.log(err);
+      }
     };
     getProduct();
   }, [id]);
@@ -28,7 +33,14 @@ const SingleProduct = () => {
       setQuantity(quantity+1)
     }
   }
+  
+  const handleClick = () => {
+    
+    dispatch(
+      addProduct({ ...product,  quantity })
+    );
 
+  };
   return (
     <S.Container>
       <S.Wrapper>
@@ -45,7 +57,7 @@ const SingleProduct = () => {
               <S.Amount>{quantity}</S.Amount>
               <Add onClick={() => handelQuantity("increase")} />
             </S.AmounContainer>
-            <Button text="Add" />
+            <S.Button onClick={handleClick}>Add</S.Button>
           </S.AddContainer>
         </S.InfoContainer>
       </S.Wrapper>
