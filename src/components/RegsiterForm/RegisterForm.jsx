@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as S from './RegisterForm.styles'
 import Title from '../Title/Title'
 import Button from '../Button/Button'
+import {login} from '../../redux/apiCalls'
 
 const RegisterForm = () => {
+
+
   return (
     <S.Container>
       <S.Form>
         <Title text="Registration" />
-        <S.Input placeholder="name" />
         <S.Input placeholder="email" />
         <S.Input placeholder="password" />
         <S.Input placeholder="confirm password" />
