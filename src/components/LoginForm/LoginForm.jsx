@@ -2,13 +2,12 @@ import React, {useState} from 'react'
 import * as S from './LoginForm.styles'
 import Title from '../Title/Title'
 import { login } from '../../redux/apiCalls'
-import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { useDispatch } from 'react-redux/es/exports';
 
 const LoginForm = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const dispatch = useDispatch();
-  const { isFetching } = useSelector((state) => state.user);
 
   const handeLogin = (e) => {
     e.preventDefault();
@@ -27,7 +26,7 @@ const LoginForm = () => {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <S.Button onClick={handeLogin} disabled={isFetching}>Log in</S.Button>
+        <S.Button onClick={handeLogin}>Log in</S.Button>
       </S.Form>
     </S.Container>
   )
