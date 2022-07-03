@@ -4,7 +4,6 @@ import Title from '../Title/Title'
 import { login } from '../../redux/apiCalls'
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 
-
 const LoginForm = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

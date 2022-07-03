@@ -5,7 +5,9 @@ import Button from '../Button/Button'
 import {login} from '../../redux/apiCalls'
 
 const RegisterForm = () => {
-
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [passwordRep, setPasswordRep] = useState();
 
   return (
     <S.Container>

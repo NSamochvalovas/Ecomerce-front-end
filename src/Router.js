@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 const Router = () => {
-const user = useSelector((state) => state.user.currentUser);
+const user = useSelector((state) => state.user.curentUser);
 
   return (
     <BrowserRouter>

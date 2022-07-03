@@ -3,12 +3,18 @@ import * as S from './Navbar.styles';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { Link } from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { logOut } from '../../redux/userRedux'
 
 const Navbar = () => {
 
   const quantity = useSelector(state=> state.cart.quantity);
+  const dispatch = useDispatch()
 
+  const handleLogout = () =>{
+    dispatch(logOut());
+
+  };
   return (
     <S.Container>
       <S.Wrapper>
@@ -30,8 +36,9 @@ const Navbar = () => {
             <Link to="/cart">
               <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
-          </Badge>
+              </Badge>
             </Link>
+            <button onClick={handleLogout}>Log Out</button>
           </S.MenuItem>
         </S.Right>
       </S.Wrapper>
