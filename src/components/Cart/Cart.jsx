@@ -12,7 +12,7 @@ const  Cart = () => {
         <S.Top>
           <Button text="Continue Shopping" />
           <S.TopText>Shopping bag(2)</S.TopText>
-          <Button text="Check Out" />
+          <Button text="Delete cart" />
         </S.Top>
         <S.Bottom>
           <S.Info>

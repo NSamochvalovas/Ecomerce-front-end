@@ -9,6 +9,7 @@ import ProductsList from "./pages/ProductsList";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Add from "./pages/Add";
 
 const Router = () => {
 const user = useSelector((state) => state.user.curentUser);
@@ -24,6 +25,8 @@ const user = useSelector((state) => state.user.curentUser);
           user? <Navigate to="/" /> : <RegisterPage />} />
         <Route exact path="/login" element={
           user? <Navigate to="/" /> : <LoginForm />}/>
+        <Route exact path="/add" element={
+          !user? <Navigate to="/" /> : <Add /> } />
         <Route exact path="/cart" element={<CartPage />} />
       </Routes>
     <Footer />

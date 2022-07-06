@@ -13,25 +13,18 @@ const Navbar = () => {
 
   const handleLogout = () =>{
     dispatch(logOut());
-
   };
   return (
     <S.Container>
       <S.Wrapper>
         <S.Left>
-          <S.Language>EN</S.Language> 
-          <S.SearchContainer>
-            <S.Input />
-            <Search style={{color:"gray", fontSize:16}}/>
-          </S.SearchContainer> 
-        </S.Left>
-        <S.Center>
           <S.Logo>Logo.</S.Logo>
-        </S.Center>
+        </S.Left>
         <S.Right>
           <S.MenuItem><Link to="/">Home</Link></S.MenuItem>
           <S.MenuItem><Link to="/register">Register</Link></S.MenuItem>
           <S.MenuItem><Link to="/login">Log in</Link></S.MenuItem>
+          <S.MenuItem><Link to="/add">Add</Link></S.MenuItem>
           <S.MenuItem>
             <Link to="/cart">
               <Badge badgeContent={quantity} color="primary">
