@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../../requoseMethods';
 import { addProduct } from '../../redux/cartRedux';
 import { useDispatch } from 'react-redux/es/exports'; 
-import axios from 'axios';
 
 
 const SingleProduct = () => {

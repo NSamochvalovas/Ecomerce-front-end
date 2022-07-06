@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const handleLogout = () =>{
     dispatch(logOut());
+    alert('You have log out')
   };
   return (
     <S.Container>

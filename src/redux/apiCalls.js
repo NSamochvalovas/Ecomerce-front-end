@@ -7,7 +7,8 @@ export const login = async (dispatch, user) => {
     const res = await publicRequest.post("/auth/login",user)
     dispatch(loginSucess(res.data));
   }catch(err){
-    console.log(err)
+    console.log(err);
+    alert("Wrong data entered")
   }
 }
 
@@ -17,6 +18,7 @@ export const registration = async (dispatch, user) => {
     const res = await publicRequest.post("/auth/register",user)
     dispatch(loginSucess(res.data));
   }catch(err){
-    console.log(err)
+    console.log(err);
+    alert("Wrong data entered")
   }
 }

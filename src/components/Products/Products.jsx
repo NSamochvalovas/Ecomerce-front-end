@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './Products.styles';
 import Product from '../Product/Product';
-import axios from 'axios';
 import {publicRequest} from '../../requoseMethods';
 
 const Products = ({ category, filters, sort }) => {
