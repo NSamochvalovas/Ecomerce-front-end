@@ -116,8 +116,8 @@ export const Button = styled.button`
   color:#fff;
   padding:10px 20px;
   &:hover{
-    color:#000;
-    background: #fff;
+    color:#000 !important;
+    background: #cdcccc;
     font-weight:bold;
     transition: 0.5s ease;
   }
