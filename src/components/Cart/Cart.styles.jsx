@@ -121,6 +121,7 @@ export const Button = styled.button`
     font-weight:bold;
     transition: 0.5s ease;
   }
+  ${mobile({marginBottom:"5px"})}
 `;
 
 export const Link = styled.a`

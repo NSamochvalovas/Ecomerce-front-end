@@ -1,10 +1,11 @@
 import React from 'react';
 import * as S from './Navbar.styles';
-import { Search, ShoppingCartOutlined } from '@mui/icons-material';
+import { ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { logOut } from '../../redux/userRedux'
+import { logOut } from '../../redux/userRedux';
+import { removeCart } from '../../redux/cartRedux';
 
 const Navbar = () => {
 
@@ -13,8 +14,10 @@ const Navbar = () => {
 
   const handleLogout = () =>{
     dispatch(logOut());
+    dispatch(removeCart());
     alert('You have log out')
   };
+
   return (
     <S.Container>
       <S.Wrapper>
