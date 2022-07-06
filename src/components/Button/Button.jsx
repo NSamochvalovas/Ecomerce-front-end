@@ -4,7 +4,7 @@ import * as S from './Button.styles'
 
 const Button = ({text}) => {
   return (
-    <S.Button>{text}</S.Button>
+    <S.Button type="submit">{text}</S.Button>
   )
 }
 

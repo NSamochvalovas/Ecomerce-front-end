@@ -37,4 +37,13 @@ export const MenuItem = styled.a`
   ${mobile({fontSize:"12px", marginRight:"5px"})}
 `;
 
+export const Button = styled.button`
+  background:#000;
+  color:#fff;
+  border:none;
+  padding: 5px 10px;
+  border-radius:2px;
+  font-size:12px;
+`;
+ 
   

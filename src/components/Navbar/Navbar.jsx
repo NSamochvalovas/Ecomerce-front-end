@@ -21,18 +21,18 @@ const Navbar = () => {
           <S.Logo>Logo.</S.Logo>
         </S.Left>
         <S.Right>
-          <S.MenuItem><Link to="/">Home</Link></S.MenuItem>
-          <S.MenuItem><Link to="/register">Register</Link></S.MenuItem>
-          <S.MenuItem><Link to="/login">Log in</Link></S.MenuItem>
-          <S.MenuItem><Link to="/add">Add</Link></S.MenuItem>
+          <S.MenuItem><Link to="/" style={{ textDecoration: 'none', color: '#000' }}>Home</Link></S.MenuItem>
+          <S.MenuItem><Link to="/register" style={{ textDecoration: 'none', color: '#000' }}>Register</Link></S.MenuItem>
+          <S.MenuItem><Link to="/login" style={{ textDecoration: 'none', color: '#000' }}>Log in</Link></S.MenuItem>
+          <S.MenuItem><Link to="/add" style={{ textDecoration: 'none', color: '#000' }}>Add</Link></S.MenuItem>
           <S.MenuItem>
             <Link to="/cart">
               <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
               </Badge>
             </Link>
-            <button onClick={handleLogout}>Log Out</button>
           </S.MenuItem>
+          <S.Button onClick={handleLogout}>Log Out</S.Button>
         </S.Right>
       </S.Wrapper>
     </S.Container>

@@ -1,19 +1,34 @@
 import React from 'react';
 import * as S from './Cart.styles';
 import Button from '../Button/Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeCart } from '../../redux/cartRedux';
+import { Link } from 'react-router-dom';
 
 const  Cart = () => {
-  const cart = useSelector(state=>state.cart)
+
+  const dispatch = useDispatch()
+  const cart = useSelector(state=>state.cart);
+
+  const handleDelete = () => {
+    dispatch(removeCart());
+    location.reload();
+  }
+
   return (
     <S.Container>
       <S.Wrapper>
-        <S.Title>Product name</S.Title>
-        <S.Top>
-          <Button text="Continue Shopping" />
-          <S.TopText>Shopping bag(2)</S.TopText>
-          <Button text="Delete cart" />
-        </S.Top>
+        {cart.products.map((product) => (
+          <>
+          <S.Title>{product.title}</S.Title>
+          <S.Top>
+            <S.Button><Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>Continue shopping</Link></S.Button>
+            <S.TopText>Quantity: {product.quantity}</S.TopText>
+            <S.Button onClick={handleDelete}>Delete cart</S.Button>
+          </S.Top>
+          </>           
+        ))}
+        
         <S.Bottom>
           <S.Info>
           {cart.products.map((product) => (
