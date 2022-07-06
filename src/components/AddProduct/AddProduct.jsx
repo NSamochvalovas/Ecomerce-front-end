@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import * as S from './AddProduct.styles';
 import Title from '../Title/Title'
+import {publicRequest} from '../../requoseMethods';
 
 function AddProduct() {
   const [title, setTitle] = useState();
@@ -17,7 +18,7 @@ function AddProduct() {
   e.preventDefault();
   if(TOKEN === true) {
     try{
-      const res = await axios.post('http://localhost:8080/products', {
+      const res = await publicRequest.post('products', {
         header: { token: `Bearer ${TOKEN}` },
         title: title,
         description: description,

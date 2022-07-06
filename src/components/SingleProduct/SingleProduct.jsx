@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../../requoseMethods';
 import { addProduct } from '../../redux/cartRedux';
 import { useDispatch } from 'react-redux/es/exports'; 
+import axios from 'axios';
+
 
 const SingleProduct = () => {
   const location = useLocation();
@@ -17,7 +19,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get("/products/find/" + id);
+        const res = await publicRequest.get("products/find/" + id);
         setProduct(res.data);
       } catch (err){
         console.log(err);
