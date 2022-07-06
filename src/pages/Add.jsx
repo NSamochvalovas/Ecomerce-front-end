@@ -1,5 +1,5 @@
-import React from 'react'
-import AddProduct from '../components/AddProduct/AddProduct'
+import React from 'react';
+import AddProduct from '../components/AddProduct/AddProduct';
 function Add() {
   return (
     <AddProduct />

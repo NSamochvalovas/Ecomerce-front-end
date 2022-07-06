@@ -9,24 +9,17 @@ function Product( {item} ) {
     <S.SingleProduct>
       <S.Image src={item.image} />
       <S.InfoBLock>
-        <S.Info>
-            <S.Icon>
-              <ShoppingCartCheckoutOutlined />
-            </S.Icon>
-          </S.Info>
-          <S.Info>
-          <S.Icon>
-            <Link to={`/product/${item._id}`}>
-              <SearchOffOutlined />
-            </Link>
-          </S.Icon>
-          </S.Info>
-          <S.Info>
-            <S.Icon>
-              <FavoriteBorderOutlined />
-            </S.Icon>
-          </S.Info>
+        <S.Icon>
+          <Link to={`/product/${item._id}`} style={{ textDecoration: 'none', color: '#fff'}}>
+            <SearchOffOutlined style={{height:'2em', width: '2em'}}/>
+          </Link>
+        </S.Icon>
       </S.InfoBLock>
+
+      <S.SizePriceInfo>
+            <S.Price>Price: {item.price}$</S.Price>
+            <S.Size>Sizes: {item.size}</S.Size>
+      </S.SizePriceInfo>
     </S.SingleProduct>
   )
 }

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import * as S from './LoginForm.styles'
-import Title from '../Title/Title'
-import { login } from '../../redux/apiCalls'
+import React, {useState} from 'react';
+import * as S from './LoginForm.styles';
+import Title from '../Title/Title';
+import { login } from '../../redux/apiCalls';
 import { useDispatch } from 'react-redux/es/exports';
 
 const LoginForm = () => {

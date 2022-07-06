@@ -4,12 +4,13 @@ import {mobile, tablet} from '../../responsive';
 export const SingleProduct = styled.div`
   display:flex;
   flex-direction: column;
-  max-height:250px;
+  max-height:300px;
   margin:5px;
-  width: calc(25% - 10px);
+  width: calc(25% - 12px);
   position:relative;
-  ${tablet({width:"calc(33% - 10px)"})}
-  ${mobile({width:"calc(50% - 10px)"})}
+  border: 1px solid #ddd;
+  ${tablet({width:"calc(33% - 12px)"})}
+  ${mobile({width:"calc(50% - 12px)"})}
 `;
 
 export const InfoBLock = styled.div`
@@ -30,15 +31,31 @@ export const InfoBLock = styled.div`
 `;
 
 export const Image = styled.img`
-  height:100%;
+  max-height:250px;
+  min-height:250px;
   width:100%;
-`;
-
-export const Info = styled.div`
-
 `;
 
 export const Icon = styled.div`
   padding:5px;
-  color:#fff;
+`;
+
+export const SizePriceInfo = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height:50px;
+  border-top: 1px solid #ddd;
+`;
+
+export const Price = styled.p`
+  color:#000;
+  font-weight:bold;
+  padding:5px;
+`;
+
+export const Size = styled.p`
+  color:#000;
+  font-weight:bold;
+  padding:5px;
 `;

@@ -10,12 +10,12 @@ const  Cart = () => {
 
   const handleDelete = () => {
     dispatch(removeCart());
-    location.reload();
+    
   }
 
   const hendleConfirm = () =>{
     alert('Thank you for buying');
-
+    dispatch(removeCart());
   }
 
   return (

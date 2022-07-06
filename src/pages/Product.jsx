@@ -1,5 +1,5 @@
-import React from 'react'
-import SingleProduct from '../components/SingleProduct/SingleProduct'
+import React from 'react';
+import SingleProduct from '../components/SingleProduct/SingleProduct';
 
 const Product = () => {
   return (

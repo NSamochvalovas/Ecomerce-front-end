@@ -1,6 +1,6 @@
-import { Facebook, Instagram, Room, Phone, MailOutline } from '@mui/icons-material'
-import React from 'react'
-import * as S from './Footer.styles'
+import { Facebook, Instagram, Room, Phone, MailOutline } from '@mui/icons-material';
+import React from 'react';
+import * as S from './Footer.styles';
 
 function Footer() {
   return (

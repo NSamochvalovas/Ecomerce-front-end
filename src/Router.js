@@ -1,15 +1,15 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux/es/hooks/useSelector";
-import CartPage from "./pages/CartPage";
-import LoginForm from "./components/LoginForm/LoginForm";
-import RegisterPage from "./pages/RegisterPage";
-import Product from "./pages/Product";
-import ProductsList from "./pages/ProductsList";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Add from "./pages/Add";
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import CartPage from './pages/CartPage';
+import LoginForm from './components/LoginForm/LoginForm';
+import RegisterPage from './pages/RegisterPage';
+import Product from './pages/Product';
+import ProductsList from './pages/ProductsList';
+import Home from './pages/Home';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Add from './pages/Add';
 
 const Router = () => {
 const user = useSelector((state) => state.user.curentUser);
