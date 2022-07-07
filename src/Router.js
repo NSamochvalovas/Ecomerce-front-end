@@ -19,6 +19,8 @@ const user = useSelector((state) => state.user.curentUser);
     <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/products"  element={
+        !user? <Navigate to="/login" /> : <ProductsList />} />
         <Route path="/products/:category"  element={<ProductsList />} />
         <Route exact path="/product/:id" element={<Product />} />
         <Route exact path="/register" element={
