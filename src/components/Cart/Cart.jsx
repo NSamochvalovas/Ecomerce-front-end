@@ -9,15 +9,19 @@ const  Cart = () => {
   const cart = useSelector(state=>state.cart);
 
   const handleDelete = () => {
-    dispatch(removeCart());
-  }
+    if(cart.total > 0) {
+      dispatch(removeCart());
+    } else {
+      alert('cart is empty!!')
+    }
+  };
 
   const hendleConfirm = () =>{
     if (cart.total > 5){
       alert('Thank you for buying');
       dispatch(removeCart());
     } else {
-      alert('cart is empty!!')
+      
     }
   };
 
