@@ -19,5 +19,6 @@ export const registration = async (dispatch, user) => {
     dispatch(loginSucess(res.data));
   }catch(err){
     console.log(err);
+    alert("Wrong data entered")
   }
 }
