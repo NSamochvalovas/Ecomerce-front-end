@@ -8,14 +8,18 @@ import { logOut } from '../../redux/userRedux';
 import { removeCart } from '../../redux/cartRedux';
 
 const Navbar = () => {
-
+  const user = useSelector((state) => state.user.curentUser);
   const quantity = useSelector(state=> state.cart.quantity);
   const dispatch = useDispatch()
 
   const handleLogout = () =>{
-    dispatch(logOut());
-    dispatch(removeCart());
-    alert('You have log out')
+    if (!user) {
+      alert('You are not loged in!!!!!')
+    } else {
+      dispatch(logOut());
+      dispatch(removeCart());
+      alert('You have log out')
+    }
   };
 
   return (

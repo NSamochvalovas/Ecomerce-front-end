@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 import Add from './pages/Add';
 
 const Router = () => {
-const user = useSelector((state) => state.user.curentUser);
+  const user = useSelector((state) => state.user.curentUser);
 
   return (
     <BrowserRouter>

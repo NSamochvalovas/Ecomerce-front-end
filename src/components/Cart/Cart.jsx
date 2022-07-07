@@ -10,13 +10,16 @@ const  Cart = () => {
 
   const handleDelete = () => {
     dispatch(removeCart());
-    
   }
 
   const hendleConfirm = () =>{
-    alert('Thank you for buying');
-    dispatch(removeCart());
-  }
+    if (cart.total > 5){
+      alert('Thank you for buying');
+      dispatch(removeCart());
+    } else {
+      alert('cart is empty!!')
+    }
+  };
 
   return (
     <S.Container>
