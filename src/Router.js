@@ -20,7 +20,7 @@ const user = useSelector((state) => state.user.curentUser);
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/products"  element={
-        !user? <Navigate to="/login" /> : <ProductsList />} />
+          !user? <Navigate to="/login" /> : <ProductsList />} />
         <Route path="/products/:category"  element={<ProductsList />} />
         <Route exact path="/product/:id" element={<Product />} />
         <Route exact path="/register" element={
@@ -29,8 +29,7 @@ const user = useSelector((state) => state.user.curentUser);
           user? <Navigate to="/" /> : <LoginForm />}/>
         <Route exact path="/add" element={
           !user? <Navigate to="/login" /> : <Add /> } />
-        <Route exact path="/cart" element={
-          !user? <Navigate to="/login" /> : <CartPage /> } />
+        <Route exact path="/cart" element={ <CartPage /> } />
         
       </Routes>
     <Footer />

@@ -22,7 +22,7 @@ const  Cart = () => {
     <S.Container>
       <S.Wrapper>
         <S.Top>
-          <S.Button><Link to="/products" style={{ textDecoration: 'none', color: '#fff' }}>Continue shopping</Link></S.Button>
+          <Link to="/products" style={{ textDecoration: 'none', color: '#fff' }}><S.Button>Continue shopping</S.Button></Link>
           <S.Button onClick={handleDelete}>Delete cart</S.Button>
         </S.Top>
 
