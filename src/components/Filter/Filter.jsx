@@ -39,7 +39,6 @@ const  Filter = ({title}) => {
         <S.Filter>
           <S.FilterText>Sort Products:</S.FilterText>
           <S.Select onChange={e=>setSort(e.target.value)}>
-            <S.Option value="newst">Newst</S.Option>
             <S.Option value="asc">Lowest Price</S.Option>
             <S.Option value="dec">Highest Price</S.Option>
           </S.Select>
