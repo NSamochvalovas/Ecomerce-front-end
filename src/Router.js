@@ -16,23 +16,22 @@ const user = useSelector((state) => state.user.curentUser);
 
   return (
     <BrowserRouter>
-    <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/products"  element={
-          !user? <Navigate to="/login" /> : <ProductsList />} />
-        <Route path="/products/:category"  element={<ProductsList />} />
-        <Route exact path="/product/:id" element={<Product />} />
-        <Route exact path="/register" element={
-          user? <Navigate to="/" /> : <RegisterPage />} />
-        <Route exact path="/login" element={
-          user? <Navigate to="/" /> : <LoginForm />}/>
-        <Route exact path="/add" element={
-          !user? <Navigate to="/login" /> : <Add /> } />
-        <Route exact path="/cart" element={ <CartPage /> } />
-        
-      </Routes>
-    <Footer />
+      <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products"  element={
+            !user? <Navigate to="/login" /> : <ProductsList />} />
+          <Route path="/products/:category"  element={<ProductsList />} />
+          <Route exact path="/product/:id" element={<Product />} />
+          <Route exact path="/register" element={
+            user? <Navigate to="/" /> : <RegisterPage />} />
+          <Route exact path="/login" element={
+            user? <Navigate to="/" /> : <LoginForm />}/>
+          <Route exact path="/add" element={
+            !user? <Navigate to="/login" /> : <Add /> } />
+          <Route exact path="/cart" element={ <CartPage /> } />    
+        </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
