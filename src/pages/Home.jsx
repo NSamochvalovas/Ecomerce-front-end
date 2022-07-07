@@ -38,7 +38,7 @@ const Home = () => {
       <Title text="Most Popular Products" />
       <Products />
       <AlingButton>
-      <Link to="/products" style={{ textDecoration: 'none', color: '#fff' }}><Button>Wiew all</Button></Link>
+        <Link to="/products" style={{ textDecoration: 'none', color: '#fff' }}><Button>Wiew all</Button></Link>
       </AlingButton>
     </>
   )
