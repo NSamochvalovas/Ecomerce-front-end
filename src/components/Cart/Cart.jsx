@@ -21,7 +21,7 @@ const  Cart = () => {
       alert('Thank you for buying');
       dispatch(removeCart());
     } else {
-      
+      alert('cart is empty!!')
     }
   };
 
